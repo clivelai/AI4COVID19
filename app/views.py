@@ -110,10 +110,10 @@ def diagnose_view(request):
         # audio_path = os.path.join(settings.BASE_DIR, f'media_cdn\coughing_audio\{request.user.pk}')
         # diagnose_code = main("coughing_audio.wav", audio_path)
         request.user.diagnose_code = 1
-        request.user.diagnose_code = diagnose_code
+        # request.user.diagnose_code = diagnose_code
         request.user.save()
         # delete old audio
-        request.user.coughing_audio.delete()
+        # request.user.coughing_audio.delete()
         
         # save coughing result to history
         testDateTime = datetime.now().strftime('%d/%m/%y %H:%M:%S')
