@@ -25,7 +25,7 @@ def auth_view(request, *args, **kwargs):
     if user.is_authenticated: 
         return redirect("dashboard")
     destination = get_redirect_if_exists(request)
-    print("destination: " + str(destination) + ", user: " + user)
+    print("destination: " + str(destination))
     
     context = {}
     

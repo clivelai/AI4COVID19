@@ -18,6 +18,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, re_path, include
 from django.views.generic import RedirectView
+from django.views.static import serve 
 
 from app.views import (
     welcome_view,
@@ -39,6 +40,8 @@ from app.views import (
 
 urlpatterns = [
     re_path(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
+    re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
     path('admin/', admin.site.urls),
     path('', welcome_view, name="welcome"),
     path('auth/', auth_view, name="auth"),
