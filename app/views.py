@@ -97,9 +97,6 @@ def diagnose_view(request):
     # is_ajax is deprecated and removed since django 4.0
     if request.method == 'POST': 
         
-        # delete old audio
-        request.user.coughing_audio.delete()
-        
         # recieve audio blob from ajax
         file = request.FILES.get('audio')
         print(f'ajax file recieved: {file}')
@@ -115,6 +112,8 @@ def diagnose_view(request):
         # request.user.diagnose_code = 2
         request.user.diagnose_code = diagnose_code
         request.user.save()
+        # delete old audio
+        request.user.coughing_audio.delete()
         
         # save coughing result to history
         testDateTime = datetime.now().strftime('%d/%m/%y %H:%M:%S')
