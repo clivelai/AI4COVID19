@@ -76,6 +76,8 @@ if DEBUG:
 # this is the main reason for not showing up the toolbar
 import mimetypes
 mimetypes.add_type("application/javascript", ".js", True)
+# enable mimetypes css in heroku deployment
+mimetypes.add_type("text/css", ".css", True)
 
 DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False,
