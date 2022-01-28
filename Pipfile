@@ -18,6 +18,7 @@ numpy = "==1.20.3"
 scikit-learn = "==1.0.1"
 Django = "==4.0.1"
 pillow = "*"
+whitenoise = "*"
 
 [dev-packages]
 
