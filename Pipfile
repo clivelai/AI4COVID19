@@ -6,8 +6,17 @@ name = "pypi"
 [packages]
 django = "*"
 django-debug-toolbar = "*"
+psycopg2-binary = "*"
+comet-ml = "*"
+keras = "*"
+librosa = "*"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+scikit-learn = "*"
+tensorflow = "==2.7.0"
 
 [dev-packages]
 
 [requires]
-python_version = "3.8"
+python_version = "3.9"
