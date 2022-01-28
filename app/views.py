@@ -102,22 +102,24 @@ def diagnose_view(request):
         print(f'ajax file recieved: {file}')
                 
         # save audio to user model
-        # request.user.coughing_audio.save("coughing_audio.wav", file)
-        # request.user.save()
+        request.user.coughing_audio.save("coughing_audio.wav", file)
+        request.user.save()
         
         # ready for KNN identifier
         # 1=healthy, 2=symtomatic
-        # audio_path = os.path.join(settings.BASE_DIR, f'media_cdn\coughing_audio\{request.user.pk}')
-        # diagnose_code = main("coughing_audio.wav", audio_path)
-        request.user.diagnose_code = 1
-        # request.user.diagnose_code = diagnose_code
+        audio_path = os.path.join(settings.BASE_DIR, f'media_cdn\coughing_audio\{request.user.pk}')
+        diagnose_code = main("coughing_audio.wav", audio_path)
+        request.user.diagnose_code = diagnose_code
         request.user.save()
+        
         # delete old audio
-        # request.user.coughing_audio.delete()
+        request.user.coughing_audio.delete()
+        request.user.save()
         
         # save coughing result to history
         testDateTime = datetime.now().strftime('%d/%m/%y %H:%M:%S')
         diagnose_string = ''
+        # diagnose_code = 2
         if diagnose_code == 2:
             diagnose_string = 'POSITIVE'
         elif diagnose_code == 1:
