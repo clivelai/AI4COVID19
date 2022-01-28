@@ -350,19 +350,19 @@ class AI4Covid19():
         print(filepath)
         processed = generateMFCC(filepath)
         processed = np.array([processed])
-
+        print(processed)
         # predict if there is cough
         prediction_cough = self.model_esc.predict_on_batch(processed)
-        # print(prediction_cough)
+        print(prediction_cough)
         classes = np.argmax(prediction_cough, axis=1)
-        # print(classes)
-        # print(self.le_esc.classes_[classes])
+        print(classes)
+        print(self.le_esc.classes_[classes])
 
         # predict if there is covid
         prediction_covid = self.model_cv.predict_on_batch(processed)
-        # print(prediction_covid)
+        print(prediction_covid)
         classes_cv = np.argmax(prediction_covid, axis=1)
-        # print(classes_cv)
+        print(classes_cv)
         print(self.le_cv.classes_[classes_cv])
 
         return classes_cv[0]
