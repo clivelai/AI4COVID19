@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xfc^67159qunr01p2ow=#xd%tmxixwkg*^+@wxmqa*d!(888y_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['clivelai.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['ai4covid19.herokuapp.com','127.0.0.1']
 
 # Authentication
 AUTH_USER_MODEL = 'app.Account'
