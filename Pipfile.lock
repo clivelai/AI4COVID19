@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3250761f0b37b6ca1a12be2a6ccef660565fa00c005641c898a06d267af3beec"
+            "sha256": "6b7e65aa2b2e988bedb72db902a40d609ae5988ad99d71c16a1079804f0e369c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -117,11 +117,11 @@
         },
         "comet-ml": {
             "hashes": [
-                "sha256:64c014fd76eac6922d50637b6488b01b876f0ce49df5bbe4716a2eeca3f7477e",
-                "sha256:fd442eef4ea2182019e4bcc72dab3b07cdab6be89a8702cc71ead4c7869ceb1b"
+                "sha256:2620786d2bb22c409bb6d073ccf135d51c5c17767860d8519f021dcbfc18340a",
+                "sha256:e0f94fc5c8b5031feff004b29731e072d0ed3d08f2fd353310a5099fd95c6c43"
             ],
             "index": "pypi",
-            "version": "==3.24.2"
+            "version": "==3.25.0"
         },
         "configobj": {
             "hashes": [
@@ -206,6 +206,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==4.29.0"
+        },
+        "gunicorn": {
+            "hashes": [
+                "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e",
+                "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"
+            ],
+            "index": "pypi",
+            "version": "==20.1.0"
         },
         "idna": {
             "hashes": [
