@@ -346,7 +346,7 @@ class AI4Covid19():
         print('Model loaded.')
 
     def predict_cough(self, file, parent):
-        filepath = f'{parent}\{file}'
+        filepath = f'{parent}/{file}'
         print(filepath)
         processed = generateMFCC(filepath)
         processed = np.array([processed])
