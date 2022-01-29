@@ -3,7 +3,7 @@
     background: #183E83;
     border-radius: 20px;
     display: flex;
-    height: 80px;
+    height: 72.5px;
     width:  auto;
     padding: 20px;
     margin: 20px;
@@ -13,7 +13,7 @@
     vertical-align: middle;
     font: Arial, Helvetica, sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .empty-space {

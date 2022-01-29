@@ -12,7 +12,7 @@ body {
 .appbar-container {
     position: fixed;
     z-index: 10;
-    height: 65px;
+    height: 55px;
     width: 100%;
     background-color: rgba(107,168,234,255);
     box-shadow: 0px 0px 10px rgba(0,0,0,0.35);
@@ -26,13 +26,18 @@ body {
     height: 100%;
     margin: 0 30px;
 }
-  
-  .appbar-grid-item > a > img {
-    height: 25px;
+
+.appbar-grid-item > h2 {
+    font-size: 20px;
+}
+
+.appbar-grid-item > a > img {
+    height: 20px;
+    margin-top: 2px;
 }
 
 .body-container {
-    padding-top: 65px;
+    padding-top: 55px;
 }
 
 /* bottomBar */
@@ -43,7 +48,7 @@ body {
     z-index: 10;
     bottom: 0;
     width: 100%;
-    height: 55px;
+    height: 50px;
     background-color: #6BA8EA ;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.35);
 }
@@ -69,7 +74,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    font-size: 13px;
+    font-size: 11px;
     color: #ffffff;
     text-decoration: none;
 }
@@ -85,7 +90,7 @@ body {
 }
 
 #image_placeholder {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
 

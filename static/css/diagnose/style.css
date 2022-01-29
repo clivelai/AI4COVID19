@@ -9,7 +9,7 @@
 /* Body container  */
 
 .body-container > div {
-  height: calc(50vh - 32.5px);
+  height: calc(50vh - 27.5px);
 }
 
 .body-upper-container > div {
@@ -31,11 +31,12 @@
   align-items: center;
   width: 100%;
   margin: auto;
+  padding-top: 20px;
 }
 
 .body-upper-grid-item > span {
   font-family: "Segoe UI";
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #img_wave {
@@ -101,6 +102,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.body-lower-view-result > img {
+  height: 80%;
+  width: auto;
+}
+
 /* 
 .body-lower-view-result > button {
   margin: auto;
@@ -120,7 +127,7 @@
 .body-lower-view-result > a {
   margin: auto;
   position: fixed;
-  top: calc(100vh - 150px); left: 0; bottom: 0; right: 0;
+  top: calc(100vh - 100px); left: 0; bottom: 0; right: 0;
   width: 80%;
   height: 50px;
   border-radius: 50px;
