@@ -155,6 +155,25 @@ function Visibility () {
     }
 }
 
+function absorbEvent_(event) {
+    var e = event || window.event;
+    e.preventDefault && e.preventDefault();
+    e.stopPropagation && e.stopPropagation();
+    e.cancelBubble = true;
+    e.returnValue = false;
+    return false;
+}
+  
+function preventLongPressMenu(node) {
+    // node.ontouchstart = absorbEvent_;
+    // node.ontouchmove = absorbEvent_;
+    // node.ontouchend = absorbEvent_;
+    // node.ontouchcancel = absorbEvent_;
+    node.onmousedown = absorbEvent_;
+    node.onmousemove = absorbEvent_;
+    node.onmouseup = absorbEvent_;
+}
+
 window.onload = function Init() {
     recordingCount = 0;
     btnMicrophone = document.getElementById ("btn_microphone");
@@ -188,18 +207,14 @@ window.onload = function Init() {
     }
     navigator.getUserMedia({audio: true}, startUserMedia, function(e) {alert('No live audio input: ' + e);});
 
-    
+    preventLongPressMenu(btnMicrophone);
 
     if (btnMicrophone.addEventListener) {  // all browsers except IE before version 9
         btnMicrophone.addEventListener ("mousedown", function (e) {
-            e.preventDefault(); 
-            e.stopPropagation();
             OnButtonDown (btnMicrophoneBorder);
             startRecording();
         }, false);
         btnMicrophone.addEventListener ("mouseup", function (e) {
-            e.preventDefault(); 
-            e.stopPropagation();
             OnButtonUp (btnMicrophoneBorder);
             if (recordingCount < 6) {
                 pauseRecording();

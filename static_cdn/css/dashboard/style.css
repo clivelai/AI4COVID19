@@ -28,6 +28,11 @@
     box-shadow: 0px 2px 10px 0px #00000040;
 }
 
+.button > a {
+    text-decoration: none;
+    color:#162b4b;
+}
+
 .map{
     display: grid;
     background: #f2f2f2;
