@@ -189,12 +189,12 @@ window.onload = function Init() {
     navigator.getUserMedia({audio: true}, startUserMedia, function(e) {alert('No live audio input: ' + e);});
 
     if (btnMicrophone.addEventListener) {  // all browsers except IE before version 9
-        btnMicrophone.addEventListener ("mousedown", function (e) {
+        btnMicrophone.addEventListener ("pointerdown", function (e) {
             e.preventDefault(); 
             OnButtonDown (btnMicrophoneBorder);
             startRecording();
         }, false);
-        btnMicrophone.addEventListener ("mouseup", function (e) {
+        btnMicrophone.addEventListener ("pointerup", function (e) {
             e.preventDefault(); 
             OnButtonUp (btnMicrophoneBorder);
             if (recordingCount < 6) {
