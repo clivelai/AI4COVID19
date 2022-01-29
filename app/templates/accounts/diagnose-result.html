@@ -15,6 +15,9 @@
 {% comment %} disable bottomBar {% endcomment %}
 {% block bottomBar %}{% endblock %}
 
+{% comment %} body preload {% endcomment %}
+{% block preload %}oncontextmenu="return false"{% endblock %}
+
 {% comment %} body content {% endcomment %}
 {% block content %}
 {% load static %}

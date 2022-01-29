@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="{% static 'css/dashboard/style.css' %}">
 {% endblock %}
 
+{% comment %} body preload {% endcomment %}
+{% block preload %}oncontextmenu="return false"{% endblock %}
+
 {% comment %} body content {% endcomment %}
 {% block content %}
 {% load static %}

@@ -18,15 +18,17 @@
 <div class="body-container">
 
       {% if coughing_result_list %}
-            {% for item in coughing_result_list %}
+            {% for item in coughing_result_list reversed %}
             <div class="history-item">
                   <span>DATE: {{item.test_date_time}}</span>
                   <span>RESULT: {{item.diagnose_status}}</span>
             </div>
             {% endfor %}
-
+            <div class="empty-space"></div>
       {% else %}
-            <div>Nothing else here</div>
+            <div class="when-no-result">
+                  <span>No record available</span>
+            </div>
 
       {% endif %}
 

@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% comment %} body preload {% endcomment %}
-{% block preload %}onload = "Init()"{% endblock %}
+{% block preload %}oncontextmenu="return false"{% endblock %}
 
 {% comment %} body content {% endcomment %}
 {% block content %}

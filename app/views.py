@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+from pytz import timezone
 from sqlite3 import Timestamp
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -117,7 +118,7 @@ def diagnose_view(request):
         request.user.save()
         
         # save coughing result to history
-        testDateTime = datetime.now().strftime('%d/%m/%y %H:%M:%S')
+        testDateTime = datetime.now(timezone('Asia/Kuala_Lumpur')).strftime('%d/%m/%y %H:%M:%S')
         diagnose_string = ''
         # diagnose_code = 2
         if diagnose_code == 2:
