@@ -1,4 +1,4 @@
-/* disable pointer event */ 
+/* disable text selection */ 
 body {
     -webkit-touch-callout: none; /* System default menu is disabled */
     -webkit-user-select: none; /* Webkit browser */
@@ -6,10 +6,6 @@ body {
     -Moz-user-select: none; /* Firefox browser */
     -ms-user-select: none; /* IE browser */
     User-select: none; /* Is the user can select text */
-}
-
-img, a {
-    pointer-events: none;
 }
 
 /* appBar */
