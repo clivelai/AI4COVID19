@@ -37,6 +37,12 @@ body{
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font-weight: 500;
+  -webkit-touch-callout: none; /* System default menu is disabled */
+  -webkit-user-select: none; /* Webkit browser */
+  -khtml-user-select: none; /* Early browser */
+  -Moz-user-select: none; /* Firefox browser */
+  -ms-user-select: none; /* IE browser */
+  User-select: none; /* Is the user can select text */
 }
 
 h1{
