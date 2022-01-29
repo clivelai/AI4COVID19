@@ -1,4 +1,11 @@
-
+body {
+    -webkit-touch-callout: none; /* System default menu is disabled */
+    -webkit-user-select: none; /* Webkit browser */
+    -khtml-user-select: none; /* Early browser */
+    -Moz-user-select: none; /* Firefox browser */
+    -ms-user-select: none; /* IE browser */
+    User-select: none; /* Is the user can select text */
+  }
 
 /* appBar */
 .appbar-container {
@@ -81,11 +88,3 @@
     height: 25px;
 }
 
-* {
-    -webkit-touch-callout: none; /* System default menu is disabled */
-    -webkit-user-select: none; /* Webkit browser */
-    -khtml-user-select: none; /* Early browser */
-    -Moz-user-select: none; /* Firefox browser */
-    -ms-user-select: none; /* IE browser */
-    User-select: none; /* Is the user can select text */
-  }

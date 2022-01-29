@@ -1,3 +1,12 @@
+body {
+    -webkit-touch-callout: none; /* System default menu is disabled */
+    -webkit-user-select: none; /* Webkit browser */
+    -khtml-user-select: none; /* Early browser */
+    -Moz-user-select: none; /* Firefox browser */
+    -ms-user-select: none; /* IE browser */
+    User-select: none; /* Is the user can select text */
+  }
+
 /* appBar */
 .appbar-container {
     position: fixed;
@@ -7,7 +16,7 @@
     background-color: rgba(107,168,234,255);
     box-shadow: 0px 0px 10px rgba(0,0,0,0.35);
 }
-  
+
 .appbar-grid {
     display: flex;
     align-items: center;
@@ -78,3 +87,4 @@
     width: 25px;
     height: 25px;
 }
+

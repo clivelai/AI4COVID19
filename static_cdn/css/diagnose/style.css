@@ -71,8 +71,6 @@
 }
 
 #btn_onclick_border {
-  -webkit-touch-callout: none;        /* prevent callout to copy image, etc when tap to hold */
-  user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
   position: absolute;
   z-index: 1;
   width: 210px;
@@ -82,8 +80,6 @@
 }
 
 #btn_microphone {
-  -webkit-touch-callout: none;        /* prevent callout to copy image, etc when tap to hold */
-  user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
   position: absolute;
   z-index: 2;
   width: 175px;

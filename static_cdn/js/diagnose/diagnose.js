@@ -188,12 +188,18 @@ window.onload = function Init() {
     }
     navigator.getUserMedia({audio: true}, startUserMedia, function(e) {alert('No live audio input: ' + e);});
 
+    
+
     if (btnMicrophone.addEventListener) {  // all browsers except IE before version 9
-        btnMicrophone.addEventListener ("mousedown", function () {
+        btnMicrophone.addEventListener ("mousedown", function (e) {
+            e.preventDefault(); 
+            e.stopPropagation();
             OnButtonDown (btnMicrophoneBorder);
             startRecording();
         }, false);
-        btnMicrophone.addEventListener ("mouseup", function () {
+        btnMicrophone.addEventListener ("mouseup", function (e) {
+            e.preventDefault(); 
+            e.stopPropagation();
             OnButtonUp (btnMicrophoneBorder);
             if (recordingCount < 6) {
                 pauseRecording();
